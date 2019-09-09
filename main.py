@@ -9,7 +9,18 @@ logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=loggin
 logger = logging.getLogger(__name__)
 
 
+def render():
+    '''Display current location'''
+    return True
 
+def update():
+    '''Update our location, if possible, etc.''''
+    return True
+
+def check_input():
+    '''Get user input'''
+    response = input('What would you like to do?')
+    return response
 
 def main():
     game = {}
@@ -19,6 +30,14 @@ def main():
 
     current = 'WHOUS'
 
+    quit = False
+    while not quit:
+        #render
+        render()
+        #check player input
+        check_input()
+        #update
+        update()
 
     return True
 
