@@ -9,35 +9,39 @@ logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=loggin
 logger = logging.getLogger(__name__)
 
 
-def render():
+def render(game,current):
     '''Display current location'''
-    return True
+    print('You are at the ' + game['rooms'][current]['name'])
+    print(game['rooms'][current]['desc'])
 
-def update():
-    '''Update our location, if possible, etc.''''
-    return True
+def update(response,game,current):
+    '''Process the input and update the state of the world'''
+    for e in game['rooms'][current]['exits']:
+        if e['verb'] == response:
+            current = e['target']
+    return current
 
 def check_input():
     '''Get user input'''
-    response = input('What would you like to do?')
+    response = input('What would you like to do?').strip().upper()
     return response
 
 def main():
     game = {}
-    with open('zork.json') as json_file:
+    with open('game.json') as json_file:
         game = json.load(json_file)
     # Your game goes here!
 
-    current = 'WHOUS'
+    current = 'START'
 
     quit = False
     while not quit:
         #render
-        render()
+        render(game,current)
         #check player input
-        check_input()
+        selection = check_input()
         #update
-        update()
+        current = update(selection,game,current)
 
     return True
 
