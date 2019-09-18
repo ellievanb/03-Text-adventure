@@ -44,35 +44,144 @@
     "rooms": {
       "START": {
         "name": "starting place",
-        "desc": "This is the place to start!",
+        "desc": "This is the place to start! Behind you is a locked black door. In front of you is a hallway with different colored doors. You can move forward or backward",
         "exits": [
           {
-            "verb": "NORTH",
+            "verb": "FORWARD",
             "target": "LOC2",
             "condition": ""
           },
           {
-            "verb": "SOUTH",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "LOC2",
+            "verb": "BACKWARD",
+            "target": "START",
             "condition": ""
           }
         ],
         "inventory": []
       },
       "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
+        "name": "red door",
+        "desc": "The door is to your left. Behind in and in front of you are different colored doors.",
         "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC3",
+            "condition": ""
+          },
+          {
+            "verb": "BACKWARD",
+            "target": "START",
+            "condition": ""
+          },
+          {
+            "verb": "LEFT",
+            "target": "RED",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC3": {
+        "name": "yellow door",
+        "desc": "The door is to your right. Behind in and in front of you are different colored doors.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC4",
+            "condition": ""
+          },
+          {
+            "verb": "BACKWARD",
+            "target": "LOC2",
+            "condition": ""
+          },
+          {
+            "verb": "RIGHT",
+            "target": "YELLOW",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC4": {
+        "name": "blue door",
+        "desc": "The door is to your left. Behind in and in front of you are different colored doors.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC5",
+            "condition": ""
+          },
+          {
+            "verb": "BACKWARD",
+            "target": "LOC3",
+            "condition": ""
+          },
+          {
+            "verb": "LEFT",
+            "target": "BLUE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOC5": {
+        "name": "end of the hallway",
+        "desc": "There is a white door in front of you.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "END",
+            "condition": ""
+          },
+          {
+            "verb": "BACKWARD",
+            "target": "LOC4",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "END": {
+        "name": "end",
+        "desc": "Thanks for playing!",
+        "exits": [
+        ],
+        "inventory": []
+      },
+      "RED": {
+        "name": "red room.",
+        "desc": "You step through the door and your foot lands on a rock no bigger than a notebook, and see that the floor around you is lava! After a moment, the image fades away and you are in a blank room with a red door in front of you.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "YELLOW": {
+        "name": "yellow room",
+        "desc": "You step through the door and into a grassy field. There's a clear blue sky above you and you can hear birds chirping. After a moment, the image fades away and you are in a blank room with a yellow door in front of you.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC3",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BLUE": {
+        "name": "blue room",
+        "desc": "You step through the door and find yourself underwater! Schools of fish swim all around you in a colorful coral reef. After a moment, the image fades away and you are in a blank room with a blue door in front of you.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "LOC4",
+            "condition": ""
+          }
         ],
         "inventory": []
       }

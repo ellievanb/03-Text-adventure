@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 def render(game,current):
     '''Display current location'''
-    print('You are at the ' + game['rooms'][current]['name'])
+    print('\nYou are at the ' + game['rooms'][current]['name'] + '!')
     print(game['rooms'][current]['desc'])
 
 def update(response,game,current):
@@ -23,7 +23,7 @@ def update(response,game,current):
 
 def check_input():
     '''Get user input'''
-    response = input('What would you like to do?').strip().upper()
+    response = input('What would you like to do?\n').strip().upper()
     return response
 
 def main():
