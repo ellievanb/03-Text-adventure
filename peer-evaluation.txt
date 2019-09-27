@@ -1,0 +1,38 @@
+Name:Jason Zhang
+Date:9/27
+Project: P03-Text adventure
+Peer's repository: https://github.com/ellievanb/03-Text-adventure.git
+
+
+
+What is something you learned by reviewing your peer's project?
+Even if you don't put verbs into the "verbs" list in the very beginning, it will work as well. Also adding comments to the file you work on can make your code more clear and understandable.
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+In the decription of the first place, it tells player what action/movement they can do. This is a good idea to apply. I would put this on my next assignment.
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+Maybe you can add more rooms or more actions within a room. It can expand the game time significantly.
+ 
+
+What could have been clearer or better commented?
+The game.json file has no comments. The game engine is the simple version one and it already has some clear comments on it. He added few comments which are clear as well. 
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+I don't know verbs that not in the "verbs" list can work as well. I have a little bit confuse about this.
+ 
+
+Does the repository contain an appropriate LICENSE?
+Yes, it does.
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+He can add some feelings about the process of making this game or more descriptions of this assignment. He can do better.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+Good job! You made your first game(maybe) and it works well. The engine and json file are simple but it works perfectly. Congrat! 
+
